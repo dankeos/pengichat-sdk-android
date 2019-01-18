@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">exampleapp</string>
+    <string name="colorError">#FF0000</string>
+    <string name="agent_chat_online">Chat online</string>
+    <string name="helloBusiness">Hi! MyApplication use PengiChat SDK for android. Try it free! See how your customers and your company can use it for different purposes: customer care, technical support, sales and much more....</string>
+    <string name="write_your_message">Write your message</string>
+    <string name="pengi_welcome_message">Welcome message</string>
+    <string name="name_from">John Doe</string>
+    <string name="hi_from">hi man, how are you?</string>
+    <string name="time_from">11:40</string>
+    <string name="hello_sent">hello, hello!</string>
+    <string name="time_sent">11:40</string>
+    <string name="sample_popup_text">This is a sample popup window.</string>
+    <string name="closebutton_text">Exit</string>
+    <string name="continuebutton_text">Continue chat</string>
+    <string name="exitbutton_chat_text">Close chat</string>
+    <string name="me_from_text">Me</string>
+</resources>

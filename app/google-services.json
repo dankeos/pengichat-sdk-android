@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "225592861417",
+    "firebase_url": "https://keos-chat-stg-2017.firebaseio.com",
+    "project_id": "keos-chat-stg-2017",
+    "storage_bucket": "keos-chat-stg-2017.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225592861417:android:5f9d2dbd5d95e627",
+        "android_client_info": {
+          "package_name": "co.keos.exampleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "225592861417-e6jj7mt9cgmhe8e8tgcpeigmcujdconk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChkbX1f2YioYp61IVmMWKeJWlQLsYrjAI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

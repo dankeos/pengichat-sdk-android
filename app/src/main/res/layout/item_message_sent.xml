@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp">
+
+
+    <TextView
+        android:id="@+id/text_message_name"
+        android:text="@string/me_from_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/text_message_body"
+        android:layout_marginTop="4dp"
+        />
+
+    <android.support.text.emoji.widget.EmojiTextView
+        android:id="@+id/text_message_body"
+        android:text="@string/hello_sent"
+        android:background="@drawable/rounded_rectangle_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="240dp"
+        android:padding="8dp"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/text_message_name"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:autoLink="web" />
+
+    <TextView
+        android:id="@+id/text_message_time"
+        android:text="@string/time_sent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_message_body"
+        app:layout_constraintRight_toLeftOf="@+id/text_message_body" />
+
+</android.support.constraint.ConstraintLayout>
