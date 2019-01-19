@@ -48,11 +48,16 @@ dependencies {
     implementation "com.android.support:support-emoji-appcompat:"+ project.ANDROID_SUPPORT_VERSION
     implementation "com.android.support:support-emoji-bundled:"+ project.ANDROID_SUPPORT_VERSION
 
-    //Supernova Emoji
+    //Supernova Emoji - To improve user experience
     implementation 'hani.momanii.supernova_emoji_library:supernova-emoji-library:0.0.2'
+
+    //Firebase dependency
     implementation 'com.google.firebase:firebase-core:16.0.1'
+
+    //Compile the sdk module to be used
     api project(path: ':chat-sdk-firebase-adapter')
 
 }
 
+//Reads the google-services configuration file
 apply plugin: 'com.google.gms.google-services'
