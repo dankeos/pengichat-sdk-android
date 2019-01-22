@@ -48,7 +48,7 @@ import io.reactivex.disposables.Disposable;
 import timber.log.Timber;
 
 /**
- * This class helps to initialize the chatSDK and Firebase to work on the whole
+ * This class basically helps to initialize the chatSDK and Firebase configuration to work on the whole.
  * Created by ben on 9/5/17.
  */
 
@@ -72,6 +72,14 @@ public class ChatSDK {
         return initialize(config, null, null);
     }
 
+    /**
+     * Helps to initialize the session for the ChatSdk.
+     * @param config Configuration, contains the main configuration object.
+     * @param interfaceAdapter of type InterfaceAdapter, in our case we use null.
+     * @param networkAdapter of type BaseNetworkAdapter, the FirebaseNetworkAdapter is used here.
+     * @return the ChatSDK instance
+     * @throws ChatSDKException
+     */
     public static ChatSDK initialize (Configuration config, InterfaceAdapter interfaceAdapter, BaseNetworkAdapter networkAdapter) throws ChatSDKException {
 
         shared().setContext(config.context.get());
@@ -97,13 +105,14 @@ public class ChatSDK {
 
 //        if (debug) {
         // TODO: Update this
-            Timber.plant(new Timber.DebugTree());
+        Timber.plant(new Timber.DebugTree());
 //        } else {
 //            Timber.plant(new Timber.Tree());
 //        }
 
         return shared();
     }
+
 
     public void activateModule (String moduleName, String methodName, MethodArgument... arguments) throws ChatSDKException {
         try {

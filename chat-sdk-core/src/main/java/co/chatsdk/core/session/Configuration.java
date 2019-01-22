@@ -178,10 +178,17 @@ public class Configuration {
         return facebookLoginEnabled;
     }
 
+    /**
+     * Class helps to Build and initialize configuration parameters
+     */
     public static class Builder {
 
         private Configuration  config;
 
+        /**
+         * Helps to build all params in one object and helps for api requests
+         * @param context, the initialization context or activity
+         */
         public Builder (Context context) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(servicesUrl)
@@ -194,7 +201,7 @@ public class Configuration {
 
         /**
          * Sets the time in seconds to kill session
-         * @param time int
+         * @param time int, time in seconds
          * @return
          */
         public Builder setTimeToKillChat(int time){
@@ -260,6 +267,11 @@ public class Configuration {
             return this;
         }
 
+        /**
+         * Helps to build the firebase root path
+         * @param rootPath, the path like "pengi/live"
+         * @return the Builder config firebaseRootPath
+         */
         public Builder firebaseRootPath (String rootPath) {
             config.firebaseRootPath = rootPath;
             return this;
@@ -359,7 +371,7 @@ public class Configuration {
             return this;
         }
 
-         public Builder publicRoomCreationEnabled (boolean value) {
+        public Builder publicRoomCreationEnabled (boolean value) {
             config.publicRoomCreationEnabled = value;
             return this;
         }
@@ -621,8 +633,8 @@ public class Configuration {
 
         /**
          * Sets the name of the client
-         * @param name
-         * @return
+         * @param name String with the name of the client
+         * @return Builder config nameUser
          */
         public Builder setNameUser(String name){
             config.nameUser = name;
@@ -631,8 +643,8 @@ public class Configuration {
 
         /**
          * Sets the user client email
-         * @param usermail
-         * @return
+         * @param usermail String with the clients email
+         * @return Builder config userEmail
          */
         public Builder setUserEmail(String usermail){
             config.userEmail = usermail;
@@ -641,8 +653,8 @@ public class Configuration {
 
         /**
          * Sets the client location
-         * @param locationNow
-         * @return
+         * @param locationNow String with location in text
+         * @return Builder config location
          */
         public Builder setLocation(String locationNow){
             config.location = locationNow;
@@ -651,8 +663,8 @@ public class Configuration {
 
         /**
          * Sets the authentication token
-         * @param token
-         * @return
+         * @param token String with the provided chatsdk token
+         * @return Builder config authToken
          */
         public Builder setAuthToken(String token){
             config.authToken = token;
@@ -661,14 +673,18 @@ public class Configuration {
 
         /**
          * Sets the App Id.
-         * @param appId
-         * @return
+         * @param appId String with App ID
+         * @return Builder config originApp
          */
         public Builder setOriginApp(String appId){
             config.originApp = appId;
             return this;
         }
 
+        /**
+         * Helps with configuration build
+         * @return Configuration config with all params and functions
+         */
         public Configuration build () {
             return config;
         }

@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="co.chatsdk.ui.activities.MainActivity" >
+    tools:context="co.keos.exampleapp.chat.ChatActivity" >
 
     <item
         android:id="@+id/close_chat"
