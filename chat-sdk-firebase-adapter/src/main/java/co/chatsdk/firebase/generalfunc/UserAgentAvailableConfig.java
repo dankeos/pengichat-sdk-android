@@ -13,8 +13,14 @@ import retrofit2.Response;
  */
 public class UserAgentAvailableConfig {
     public static final String TAG = "UserAgentAvailable";
+
+    //User agent id
     private int id;
+
+    //Room id
     private String random_room;
+
+    //Token agent id
     private String token_agent;
 
 

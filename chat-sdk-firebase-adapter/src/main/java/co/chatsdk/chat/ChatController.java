@@ -30,16 +30,38 @@ import co.chatsdk.firebase.generalfunc.UserAgentAvailableConfig;
  */
 public class ChatController {
     public static final String TAG = "ChatController";
+
+    //Campaign configuration
     private PengiAuthorizationConfig campConfig;
+
+    //Client name
     private static String clientName;
+
+    //Room id.
     private static String room;
+
+    //Welcome default message
     private String welcomeMessage;
+
+    //Bye Message default message
     private String byeMessage;
+
+    //Disconnect Message default message
     private String disconnectMessage;
+
+    //Hold Message default message
     private String holdMessage;
+
+    //Head Message default message
     private String headMessage;
+
+    //User agent configuration
     private UserAgentAvailableConfig userAgentConfig;
+
+    //Consultant Token
     private String consultantToken;
+
+    //indicates when the user is closing the app
     private boolean isExitingNow = false;
 
 

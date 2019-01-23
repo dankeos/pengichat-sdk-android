@@ -25,16 +25,23 @@ public class Configuration {
 
     //Userdata params
     public String nameUser = "anonymous";
+
+    //The user client email
     public String userEmail = "";
+
+    //User client location
     public String location = "";
 
     //Pengi authentication data
     public String authToken;
-    public String originApp;
 
+    //The app id
+    public String originApp;
 
     //Services connection
     public static String servicesUrl = "https://pg02.pengi.co:3001";
+
+    //The object to call Pengi apis
     public static Retrofit retrofit;
 
     //Time to kill the agent chat when the app is killed in seconds
@@ -123,7 +130,9 @@ public class Configuration {
     public int messageTextColorMe = Color.parseColor("#222222");
     public int messageTextColorReply = Color.parseColor("#222222");
 
-    public String messageTimeFormat = "HH:mm";
+    //Message Time Format
+    public static String messageTimeFormat = "yyyy-MM-dd HH:mm";
+
     public String lastOnlineTimeFormat = "HH:mm";
 
     public int maxMessagesToLoad = 30;

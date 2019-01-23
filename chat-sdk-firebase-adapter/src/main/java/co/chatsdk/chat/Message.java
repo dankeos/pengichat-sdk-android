@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import co.chatsdk.core.session.Configuration;
+
 
 /**
  * The class helps to manage messages that came from firebase room/chat.
@@ -17,11 +19,20 @@ import java.util.List;
  */
 public class Message{
     private static final String TAG = "Message";
+
+    //Message list
     private static List<Message> messages = new ArrayList<>();
 
+    //The sender cliente or agente
     private String channelChat;
+
+    //Text message
     private String messageChat;
+
+    //Name of the sender
     private String nameChat;
+
+    //time in milliseconds
     private String timeChat;
 
 
@@ -88,7 +99,7 @@ public class Message{
      * @return an String with the datetime of sent.
      */
     public String getTimeChat() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+        SimpleDateFormat dateFormat = new SimpleDateFormat(Configuration.messageTimeFormat);
         Date date = new Date(Long.parseLong(timeChat));
         return dateFormat.format(date);
     }

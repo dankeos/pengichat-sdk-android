@@ -35,23 +35,58 @@ import retrofit2.Response;
  */
 public class PengiFunctions implements Serializable {
     private static final String TAG= "PengiFunctions";
+
+    //Auhentication String Token
     private static String authToken;
+
+    //App Id
     private String originApp;
+
+    //User client name
     private static String name;
+
+    //User client email
     private static String userEmail;
-    private static String ubication;
+
+    //User client string Location
+    private static String location;
+
+    //PengiAuthorizationConfig Object with Campaign configuration
     private static PengiAuthorizationConfig authConfig;
+
+    //UserAgentAvailableConfig Object with the User Agent configuration
     private static UserAgentAvailableConfig userAgentConfig;
+
+    //Consultant Configuration
     private static CreateConsultantConfig consultantConfig;
+
+    //Agent token
     private static String tokenAgent;
+
+    //Consultant token
     private static String consultantToken;
+
+    //Internal code
     private static String _internal_;
+
+    //Room id
     private static String room;
+
+    //Consultant ID
     private static int consultantId;
+
     @SuppressLint("StaticFieldLeak")
+
+    // Context
     private static Context context;
+
+    //Campaign ID.
     private static int campaignId;
+
+    //ChatController instance
     public static ChatController chat;
+
+    //Searching agents trials
     private static int getAgentTrials = 0;
 
 
@@ -62,22 +97,22 @@ public class PengiFunctions implements Serializable {
      *
      * @param nameUser String contains the name of the user client.
      * @param userMail String contains the email of the user client.
-     * @param ubicationFrom String contains the user client ubication sent by developers in String format
+     * @param locationFrom String contains the user client location sent by developers in String format
      *             and easy to read, for example "Bogota, Colombia".
      * @param token String contains the unique token authentication provided by Keos exclusively
      *              to be used for a developer with one AppID and one campaign.
-     * @param oringinApp String contains the unique AppID provided by developer and validated for
+     * @param originAppFrom String contains the unique AppID provided by developer and validated for
      *                   Pengi Authentication Service.
      * @param contextFrom of type Context that contains the MainActivity where the chat button stands.
      * @param callback of type PengiAuthCallback contains the callback to notify developers for most
      *                 important and initial callback method for authentication.
      */
-    public PengiFunctions(String nameUser, String userMail, String ubicationFrom, String token, String oringinAppFrom, Context contextFrom, PengiAuthCallback callback ){
+    public PengiFunctions(String nameUser, String userMail, String locationFrom, String token, String originAppFrom, Context contextFrom, PengiAuthCallback callback ){
         name  = nameUser;
         userEmail = userMail;
-        ubication = ubicationFrom;
+        location = locationFrom;
         authToken = token;
-        originApp = oringinAppFrom;
+        originApp = originAppFrom;
         context = contextFrom;
         getPengiAuthorization(callback);
     }
@@ -223,7 +258,7 @@ public class PengiFunctions implements Serializable {
      */
     private static Call<JsonObject> createConsultantCall(){
         CreateConsultantService createConsultantService = Configuration.retrofit.create(CreateConsultantService.class);
-        return createConsultantService.getData(name,userEmail,ubication,"[]","","",authToken,"pw_co","null",tokenAgent,room);
+        return createConsultantService.getData(name,userEmail,location,"[]","","",authToken,"pw_co","null",tokenAgent,room);
     }
 
 
@@ -419,7 +454,7 @@ public class PengiFunctions implements Serializable {
         UserInfo.put("other_params", "[]");
         UserInfo.put("random_room",userAgentConfig.getRandom_room());
         UserInfo.put("token_peer","null");
-        UserInfo.put("ubication",ubication);
+        UserInfo.put("ubication",location);
 
         HashMap<String, Object> data = new HashMap<>();
         data.put("UserInfo", UserInfo);
@@ -430,7 +465,7 @@ public class PengiFunctions implements Serializable {
         data.put("consultantToken", consultantToken);
         data.put("extensionConference", "");
         data.put("tokenUserAgent", token);
-        data.put("ubication", ubication);
+        data.put("ubication", location);
         FirebasePaths.userRef(token).child(consultantToken).push().setValue(data);
     }
 

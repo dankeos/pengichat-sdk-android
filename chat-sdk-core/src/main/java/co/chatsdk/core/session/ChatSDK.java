@@ -58,8 +58,13 @@ public class ChatSDK {
     public static String Preferences = "chat_sdk_preferences";
 
     private static final ChatSDK instance = new ChatSDK();
+
+    //Context
     public WeakReference<Context> context;
+
+    // Main configuration
     public Configuration config;
+
     public Disposable localNotificationDisposable;
 
     protected ChatSDK () {}

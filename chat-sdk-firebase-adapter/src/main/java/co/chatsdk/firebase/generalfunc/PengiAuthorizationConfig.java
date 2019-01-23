@@ -22,21 +22,51 @@ import retrofit2.Response;
 public class PengiAuthorizationConfig {
 
     public static final String TAG = "PengiAuthorizationConfig";
+
+    //Campaign id
     private int campaign_id;
+
+    //Json element with default messages
     private JsonElement messages_config;
+
+    //Workdays Start at
     private String start;
+
+    //Workdays End at
     private String end;
+
+    //sunday is a workday?
     private int sunday;
+
+    //monday is a workday?
     private int monday;
+
+    //tuesday is a workday?
     private int tuesday;
+
+    //wednesday is a workday?
     private int wednesday;
+
+    //thursday is a workday?
     private int thursday;
+
+    //friday is a workday?
     private int friday;
+
+    //saturday is a workday?
     private int saturday;
+
+    //Today string
     private String today;
+
+    //Is available today?
     private boolean isAvailableToday;
-    public boolean isOpen;
+
+    //Is in this time available
     private boolean isOnTimeAvailable;
+
+    //Is open when isAvailableToday and isOnTimeAvailable are true
+    public boolean isOpen;
 
 
     /**

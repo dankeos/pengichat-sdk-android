@@ -98,13 +98,16 @@ public class MainActivity extends AppCompatActivity {
         config.setOriginApp("co.keos.myapplication");
 
         //Clients name, this will appears in the agents graphic interface. Optional param
-        config.setNameUser("Juan");
+        config.setNameUser("Daniel Duran Schutz");
 
         //Clients email, this will appears in the agents graphic interface. Optional param
-        config.setUserEmail("juancardenas@keos.co");
+        config.setUserEmail("danielduran@keos.co");
 
         //Clients ubication. Optional param
-        config.setLocation("Popayán");
+        config.setLocation("Bogotá");
+
+        //Sets the message time format
+        config.setMessageTimeFormat("hh:mm");
 
         //Time in seconds to close the chat session when the user stops the chat or kill the app. Optional param
         config.setTimeToKillChat(30); //Default value is 60
