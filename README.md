@@ -1,5 +1,5 @@
 # pengichat-sdk-android
-Helps to integrate the Pengi system and user Agents with user Consutants (Clients) that uses android apps.
+Helps to integrate the Pengi system and user Agents with user Consultants (Clients) that uses android apps.
 This repository is an example of how implement and integrate the Pengi SDK to basic android applications.
 
 
